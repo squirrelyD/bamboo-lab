@@ -1,0 +1,39 @@
+body
+  display: flex
+  flex-direction: column
+  margin: 0
+  padding: 0
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 30px
+  li 
+    float: left
+
+i 
+  border: solid $yellow
+  border-width: 0 7px 7px 0
+  display: inline-block
+  padding: 10px
+.rightarrow
+  transform: rotate(-45deg)
+
+button
+  border: 3px solid $yellow
+  border-radius: 60px
+  cursor: pointer
+  transition: all 0.5s
+  &:hover
+    background-color: $yellow
+    color: black
+input:focus
+  outline: none
+
+
+
+footer
+  text-align: center
+  background-color: $purple-dark
+  color: white
+  padding: 1.1em 0 1.1em 0

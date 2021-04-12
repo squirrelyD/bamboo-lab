@@ -1,0 +1,221 @@
+.branding
+  width: 100%
+  height: 100vh 
+  padding: 20px
+  background-color: $purple
+  background-image: url(../img/background1.png)
+  background-size: cover            
+  background-repeat: no-repeat
+  background-position: center center
+  box-shadow: inset 0 0 0 1000px rgba(59, 1, 59, 0.8)
+
+.branding__nav
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+
+  +breakpoint($medium + 39)
+    flex-direction: column
+
+.branding__logo
+  width: 300px
+  height: 80px
+  margin-top: -2rem
+  margin-left: -8rem
+
+.branding__nav--left
+  display: flex
+  justify-content: space-between
+  align-items: center
+  ul
+    +breakpoint($large)
+      padding-bottom: 0
+    +breakpoint($xxlarge)
+      padding-bottom: 0
+    +breakpoint($medium + 39)
+      display: flex
+      flex-direction: column
+      justify-content: center
+  li
+    +breakpoint($medium + 39)
+      padding: 0
+  a
+    color: white
+    font-size: 1.6em
+    font-weight: bolder
+    line-height: 250px
+    padding: 0 0 0 40px
+
+    +breakpoint($medium + 39)
+      line-height: 100px
+      font-size: 1.2em
+    +breakpoint($large)
+      line-height: 100px
+    +breakpoint($xxlarge)
+      line-height: 100px
+
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: white
+
+.branding__nav--right
+  display: flex
+  justify-content: flex-end
+  margin-top: -1rem
+
+  +breakpoint($medium + 39)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    // margin-left: 5em
+  ul
+    float: left
+    list-style-type: none
+    margin: 0
+    padding: 30px
+    padding-top: 6rem
+
+    +breakpoint($medium + 39)
+      float: none
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      flex-wrap: wrap
+
+    +breakpoint($large)
+      padding-top: 2rem
+      padding-left: 0
+      padding-right: 0
+    li 
+      float: left
+      padding-left: 5em
+
+      +breakpoint($medium + 39)
+        float: none
+
+      &:last-child
+        +breakpoint($medium + 11)
+          padding-top: 1.5em
+          // margin-left: 8.5em
+        +breakpoint($medium + 20)
+          padding-top: 0
+        +breakpoint($medium - 80)
+          padding-top: 1.5em
+
+      +breakpoint($large)
+        padding-left: 3em
+      a
+        display: inline-block
+        position: relative
+        color: white
+        overflow: hidden
+        // padding: 10px 45px
+        font-size: 1.6em
+        font-weight: bolder
+        +breakpoint($medium + 39)
+          font-size: 1.2em
+        &:link, &:visited, &:hover, &:active
+          text-decoration: none
+          color: white
+      a:after
+        content: '' attr(data-hover-label) ''
+        width: 0
+        color: $yellow
+        overflow: hidden
+        transition: width 0.4s ease-out
+        position: absolute
+        left: 0
+        top: 0
+      a:hover:after, a:focus:after
+        width: 100%
+      .branding__nav--decor-button
+        border: 3px solid $yellow
+        padding: 10px 45px
+        margin-top: -0.5em
+        border-radius: 60px
+        cursor: pointer
+        transition: all 0.5s
+        +breakpoint($medium + 39)
+          padding: 10px 30px
+        &:hover
+          background-color: $yellow
+          color: black
+
+// .branding__nav--decor-button
+//   border: 3px solid $yellow
+//   padding: 10px 45px
+//   border-radius: 60px
+//   cursor: pointer
+//   transition: all 0.5s
+//   &:hover
+//     background-color: $yellow
+//     color: black
+
+.branding__text
+  width: 38%
+  margin-left: 5%
+  h1
+    color: white
+    text-align: left
+    font-size: 5rem
+    line-height: 1.4
+    +fluid-type($medium, $wide, $minFont1, $maxFont1)
+    +breakpoint($medium + 40)
+      width: 70vw
+    +breakpoint($medium + 400)
+      width: 60vw
+    +breakpoint($medium - 100)
+      width: 90vw
+
+.branding__btns
+  +breakpoint($medium + 130)
+    margin-bottom: 1.2em
+
+.branding__btn
+  border: 3px solid white
+  border-radius: 60px
+  display: inline-block
+  margin: 1.8em 1.3em 0 10rem
+  color: white
+  padding: 10px 45px
+  font-size: 1.6em
+  font-weight: bolder
+  transition: all 0.5s
+  +breakpoint($xlarge)
+    padding: 10px 30px
+  +breakpoint($medium + 130)
+    margin-left: 0
+    margin-right: 0.8em
+    margin-bottom: 1.2em
+  +breakpoint($medium + 39)
+    font-size: 1.2em
+  +breakpoint($medium - 100)
+    margin-bottom: 0.5em
+  &:hover
+    color: black
+    background-color: white
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+
+.branding__btn--color
+  @extend button
+  margin: 1.8em 1.3em 0 10rem
+  color: white
+  font-size: 1.6em
+  font-weight: bolder
+  padding: 10px 45px
+  display: inline-block
+  margin-left: 1.2em
+  padding: 10px 70px
+  +breakpoint($xlarge)
+    padding: 10px 30px
+  +breakpoint($medium + 130)
+    margin-left: 2rem
+    margin-right: 0.8em
+    margin-bottom: 1.2em
+  +breakpoint($medium + 39)
+    font-size: 1.2em
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none

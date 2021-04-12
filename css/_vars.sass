@@ -1,0 +1,40 @@
+$purple: rgb(59, 1, 59)
+$yellow: #E8B100
+$blue: #174EFF
+$yellow-dark: #EABA26
+$purple-dark: #290129
+$minFont1: 25px
+$maxFont1: 50px
+$small: 0
+$medium: 639px
+$large: 1023px
+$xlarge: 1199px
+$xxlarge: 1439px
+$wide: 1919px
+
+=breakpoint($name)
+  @media only screen and (max-width:$name)
+    @content
+
+
+@function strip-unit($value) 
+  @return $value / ($value * 0 + 1)
+
+
+=fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) 
+  $u1: unit($min-vw)
+  $u2: unit($max-vw)
+  $u3: unit($min-font-size)
+  $u4: unit($max-font-size)
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 
+    & 
+      font-size: $min-font-size
+      @media screen and (min-width: $min-vw) 
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+      
+      @media screen and (min-width: $max-vw) 
+        font-size: $max-font-size
+      
+    
+  

@@ -1,0 +1,33 @@
+.partners
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: wrap
+  margin-left: 30rem
+  margin-right: 30rem
+  +breakpoint($wide - 200)
+    margin-left: 25rem
+    margin-right: 25rem
+  +breakpoint($wide - 400)
+    margin-left: 20rem
+    margin-right: 20rem
+  +breakpoint($xxlarge)
+    margin-left: 10rem
+    margin-right: 10rem
+  +breakpoint($xlarge + 100)
+    margin-left: 5rem
+    margin-right: 5rem
+  +breakpoint($medium + 100)
+    margin-bottom: 0
+  div
+    margin: 0 3rem 0.1rem 3rem
+    padding: 1rem 3rem 3rem 3rem
+    +breakpoint($medium + 100)
+      padding-bottom: 0.5rem
+  img
+    width: 130px
+    height: 130px
+    object-fit: scale-down
+    opacity: 0.3
+    &:hover
+      opacity: 1

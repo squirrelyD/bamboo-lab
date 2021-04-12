@@ -1,0 +1,38 @@
+.navigation
+  border-bottom: 3px solid lightgray
+  padding-bottom: 2.3em
+  +breakpoint($medium + 300)
+    padding-bottom: 1.6em
+  +breakpoint($medium + 40)
+    border-bottom: none
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 30px
+    +breakpoint($medium + 200)
+      margin-left: -1.3em
+    +breakpoint($medium + 40)
+      display: flex
+      flex-direction: column
+      align-items: center
+    li 
+      float: left
+      padding-left: 50px
+      +breakpoint($xlarge)
+        padding-left: 20px
+      +breakpoint($medium + 300)
+        padding-left: 0
+        font-size: 80%
+      a
+        display: block
+        font-size: 2em
+        text-transform: uppercase
+        padding: 10px
+        color: lightgray
+        text-decoration: none
+        transition: all 0.5s
+        +breakpoint($medium + 40)
+          border-bottom: 3px solid lightgray
+        &:hover
+          color: $purple
+          border-bottom: 5px solid $purple

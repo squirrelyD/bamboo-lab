@@ -1,0 +1,95 @@
+.end-nav
+  background-color: $purple
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: flex-start
+  color: white
+  padding: 3em 0 0 2em
+  h4
+    font-weight: bold
+  p
+    font-size: 1.25em
+    line-height: 1.7em
+  a
+    position: relative
+    display: inline-block
+    color: white
+    font-size: 1.25em
+    overflow: hidden
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: white
+  a:after
+    content: '' attr(data-hover-label) ''
+    width: 0
+    color: $yellow
+    overflow: hidden
+    transition: width 0.4s ease-out
+    position: absolute
+    left: 0
+    top: 0
+  a:hover:after, a:focus:after
+    width: 100%
+
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 5em 5em 1em 5em
+    width: 20%
+    div
+      margin: 2em 0 1em 0.5em
+  .newsletter
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    margin: 5em 20em 1em 15em
+    width: 20%
+    div
+      margin: 2em 2em 2em 0
+  form
+    display: flex
+    flex-direction: row
+    border: 1px solid lightgrey
+    border-radius: 50px
+    padding: 0.5rem 8rem 0.5rem 2rem
+    margin-left: -1em
+    width: 100%
+    background-color: white
+  .txt
+    flex-grow: 15
+    border: none
+    color: black
+    font-size: 2.5rem
+    margin-right: 6rem
+  .arrowbtn
+    // background: url(../icons/arrow.svg) no-repeat
+    flex-grow: 1
+    margin: 1.2rem -4rem 0.5rem 0
+    // background-size: contain
+    // background-position: center center
+    border: none
+    background-color: white
+  .branding-end
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    div
+      margin: 1.5em 0 1em 1.5em
+      vertical-align: text-top
+    h4
+      font-weight: normal
+  .business-insider
+    font-weight: bold
+    font-size: 1.3em
+  .branding-end__logo
+    width: 240px
+    height: 60px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
